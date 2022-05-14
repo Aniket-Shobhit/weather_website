@@ -1,4 +1,3 @@
-console.log('Hello and Welcome to the client side javascript');
 //fetch('https://puzzle.mead.io/puzzle').then((response) => {
 //    response.json().then((data) => {
 //        console.log(data);
@@ -14,7 +13,7 @@ weatherForm.addEventListener('submit',(event) => {
     event.preventDefault();
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
-    fetch(`/weather?address=${search.value}`).then((response) => {
+    fetch(`http://localhost:3000/weather?address=${search.value}`).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             messageOne.textContent = data.error;
